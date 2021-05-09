@@ -98,11 +98,17 @@ The Initialization module is one of the 5 modules that provides data to the Ethe
 The init sequence is started by pressing button 2 on the DE2 board. The initialization module will then issue a request to the arbiter. Once its write request is granted it will begin iterating though the ROM. The ROM entries are stored in the rom_init_data.mif file and are loaded on start-up. The ROM entries are described below.
 
 *1. Register 0x1F write 0x00 - turn on the chip*
+
 *2. Register 0x00 write 0x01 - reset chip*
+
 *3. Register 0x00 write 0x00 - reset chip reset flag (delayed by 10us after chip reset)*
+
 *4. Register 0xFF write 0x81 - reset interrupt flags*
+
 *5. Register 0xFE write 0x3F - reset status flags*
+
 *6. Register 0x01 write 0x2C - clear status bits*
+
 *7. Register 0x05 write 0x03 - enable receiving & promiscuous mode*
 
 The initialization procedure will sequentially read from the ROM and copy the data to the output of the module. Writing and timing is then handled by the Ethernet controller module. An additional function of the initialization module is to prohibit access to the data registers until the module is initiated. Therefore a request for a tx ethernet packet will not be able to commence until the initialization button is presses. A project implementing this code should make note of this requirement.
