@@ -5,11 +5,11 @@ We hope that our project will be beneficial for future groups looking to make us
 
 # High Level Design
 
-*1. Rationale and Inspiration:
+*1. Rationale and Inspiration:*
 
 If the trend continues, connectivity will have an increasingly important role in product design. After looking at prior years projects it became apparent that there was not a good hardware implementation of Ethernet that also allowed for the addition of higher level protocols. Other projects that did use Ethernet were implemented with the NIOS II which takes up size and adds to system complexity. We desired to pursue this project as it explored new hardware not addressed during any other labs and we believe that a good implementation could provide to be very useful for student projects in the future.
 
-*2. Logical Structure:
+*2. Logical Structure:*
 
 At a high level our design consists of a single FPGA in conjunction with the Davidcom Ethernet chip. Our project will initialize the Ethernet chip and then provides routines for sending and receiving packets from the link. The code was designed to be modular to simplify the addition of higher layer protocols. See the diagram in the hardware section for a visual depiction of the project module interconnections.
 
@@ -20,7 +20,7 @@ We created a general module that contained all the hardware needed to send and r
 For our project we decided to use a fully hardware approach. Our goal of the project was to construct a hardware module capable of Ethernet frame transmission. Overall a hardware only approach will increase the processing speed of the Ethernet unit. However, the most significant improvement is the ability to have a link layer protocol enabled in hardware without necessarily introducing a NIOS to the system. This will save in both gates and system complexity. Additionally the modular approach allows for the addition of higher layer protocols if need be.
 
 
-*4. Standards:
+*4. Standards:*
 
 As we aimed to make our project as universal as possible we adhere to the RFC standards. As we implemented Ethernet frames we adhered to the standard as depicted below.
 
