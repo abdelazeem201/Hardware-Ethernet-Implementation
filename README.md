@@ -24,5 +24,5 @@ For our project we decided to use a fully hardware approach. Our goal of the pro
 
 As we aimed to make our project as universal as possible we adhere to the RFC standards. As we implemented Ethernet frames we adhered to the standard as depicted below.
 
-![Fig. Ethernet Frame format, type II](https://en.wikipedia.org/wiki/Ethernet_frame#/media/File:Ethernet_Type_II_Frame_format.svg)
+![Fig. Ethernet Frame format, type II](https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ethernet_Type_II_Frame_format.svg/1024px-Ethernet_Type_II_Frame_format.svg.png?1620531863936)
 
